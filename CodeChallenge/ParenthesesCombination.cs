@@ -2,6 +2,11 @@
 {
     public static class ParenthesesCombination
     {
+        /// <summary>
+        /// Write a function to generate all possible n pairs of balanced parentheses.
+        /// </summary>
+        /// <param name="numberOfParentheses"></param>
+        /// <returns></returns>
         public static IList<string> GetAllCombinations(int numberOfParentheses)
         {
             if(numberOfParentheses < 1)

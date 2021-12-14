@@ -20,6 +20,12 @@
         {
         }
 
+        /// <summary>
+        /// Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. 
+        /// Map digits to letters just like they are on the telephone buttons.
+        /// </summary>
+        /// <param name="input"></param>
+        /// <returns></returns>
         public List<string> GetPhoneMessage(string input)
         {
             return GetPhoneMessage(new List<string>(), input.Length, 0, new char[input.Length], input.ToCharArray());

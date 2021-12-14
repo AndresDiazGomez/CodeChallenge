@@ -17,6 +17,12 @@ namespace CodeChallenge
             _close = close;
         }
 
+        /// <summary>
+        /// Check for Balanced Brackets in an expression (well-formedness).
+        /// Given an expression string exp, write a program to examine whether the pairs and the orders of “{“, “}”, “(“, “)”, “[“, “]” are correct in exp.
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
         public static bool MeetOpenClose(string value)
         {
             if (value == null || value.Length < 2 || value.Length % 2 != 0)

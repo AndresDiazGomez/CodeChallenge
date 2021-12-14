@@ -2,6 +2,12 @@
 {
     public static class NumberDecomposition
     {
+        /// <summary>
+        /// Return a list of numbers that can be decomposed in such way that the sum of them results in the number itself.
+        /// A number cannot be repeated (appear twice in the same sum operation) neither be zero (0).
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
         public static List<List<int>> Decompose(int number)
         {
             if (number <= 2)
