@@ -2,7 +2,7 @@
 {
     public class PhoneNumber
     {
-        private Dictionary<char, char[]> _phoneNumberKey = new() 
+        private readonly Dictionary<char, char[]> _phoneNumberKey = new() 
         {
             { PhoneNumberKey.One.NumberKey, PhoneNumberKey.One.Letters },
             { PhoneNumberKey.Two.NumberKey, PhoneNumberKey.Two.Letters },
