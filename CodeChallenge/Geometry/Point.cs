@@ -48,9 +48,9 @@ namespace CodeChallenge.Geometry
         /// </summary>
         /// <param name="other">The other point to compare with.</param>
         /// <returns>true if the current object is equal to the other parameter; otherwise, false.</returns>
-        public bool Equals(Point other)
+        public bool Equals(Point? other)
         {
-            if (other == null)
+            if (other is null)
             {
                 return false;
             }
@@ -62,7 +62,7 @@ namespace CodeChallenge.Geometry
         /// </summary>
         /// <param name="other">The other object to compare with this.</param>
         /// <returns>true if the current object is equal to the other parameter; otherwise, false.</returns>
-        public override bool Equals(object obj)
+        public override bool Equals(object? obj)
         {
             return Equals(obj as Point);
         }

@@ -9,7 +9,7 @@ namespace CodeChallenge.Test
         {
             var result = ParenthesesCombination.GetAllCombinations(0);
 
-            Assert.Equal(0, result.Count);
+            Assert.Empty(result);
         }
 
         [Fact]

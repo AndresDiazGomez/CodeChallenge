@@ -35,8 +35,8 @@ namespace CodeChallenge
             {
                 int currentLength = builder.Length;
                 char firstChar = builder[0];
-                OpenClose firstElement = ToOpenClose(firstChar);
-                if (firstElement == null || closingChars.Contains(firstChar))
+                OpenClose? firstElement = ToOpenClose(firstChar);
+                if (firstElement is null || closingChars.Contains(firstChar))
                 {
                     return false;
                 }
@@ -63,10 +63,10 @@ namespace CodeChallenge
 
         private static char[] GetAllClosingSigns()
         {
-            return new[] { Curly._close, Box._close, Round._close };
+            return [Curly._close, Box._close, Round._close];
         }
 
-        private static OpenClose ToOpenClose(char value)
+        private static OpenClose? ToOpenClose(char value)
         {
             if (value == Box._open)
             {

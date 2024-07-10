@@ -5,7 +5,7 @@ namespace CodeChallenge.Test
     public class OpenCloseTests
     {
         [Theory]
-        [InlineData(null, false)]
+        [InlineData(null!, false)]
         [InlineData("", false)]
         [InlineData("a", false)]
         [InlineData("(", false)]
@@ -19,9 +19,9 @@ namespace CodeChallenge.Test
         [InlineData("(((())))", true)]
         [InlineData("((({))))", false)]
         [InlineData("[()]{}{[()()]()}", true)]
-        public void OpenClose_IsRight_ReturnTheRightValue(string value, bool expected)
+        public void OpenClose_IsRight_ReturnTheRightValue(string? value, bool expected)
         {
-            Assert.Equal(expected, OpenClose.MeetOpenClose(value));
+            Assert.Equal(expected, OpenClose.MeetOpenClose(value!));
         }
     }
 }
